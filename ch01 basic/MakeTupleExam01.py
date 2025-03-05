@@ -49,4 +49,5 @@ print('아메리카노의 위치 색인 : %d'% myindex)
 print('튜플의 응용')
 x,y = 3,4
 print('before x: %d, y:%d'%(x,y))
+x,y = y,x
 print('after x: %d, y:%d'%(x,y))

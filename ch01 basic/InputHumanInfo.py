@@ -2,7 +2,7 @@ print('이름 입력 : ', end='') #end = '' 옵션은 엔터키를 누르지 않
 name = input()
 
 print('나이 입력 : ', end='')
-age = input() #input함수는 숫자로 인식한다.
+age = input() #input함수는 문자열로 인식한다.
 age = int(age) #파이썬에서의 정수형 형변환
 
 print('키 입력 : ', end='')
