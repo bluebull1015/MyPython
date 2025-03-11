@@ -79,7 +79,9 @@ print('크롤링 중입니다. 잠시만 기다려 주세요.')
 
 # 기본 설정 값
 curPage = 1
-itemPerPage = 2 # 1번 시도시 최대 2개까지 추출 가능
+itemPerPage = 100 # 1번 시도시 최대 2개까지 추출 가능
+wantPage = 10
+
 
 while True:
     movieData = movieExtractor(curPage, itemPerPage)
@@ -108,7 +110,7 @@ while True:
 
     makeMovieTable(movieData)
 
-    if curPage == itemPerPage:
+    if curPage == wantPage:
         break # 마지막 페이지에 도달했으면 종료
     #end if
     curPage += 1 # 다음 페이지로 이동
