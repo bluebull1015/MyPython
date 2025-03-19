@@ -6,9 +6,10 @@ import pandas as pd
 
 
 
-news_filename = 'da_news_data.csv' #api요청으로 받아온 파일 전체
-news_filtered_columns = 'da_news_data_summary.csv' #전체 파일에서 특정 컬럼만 추출
-query = '다문화 가정이 겪는 어려움'
+file_dic_path = './../csv_file_gather/'
+news_filename = 'Smart_Tech_news_data.csv' #api요청으로 받아온 파일 전체
+news_filtered_columns = 'Smart_Tech_industry_news_summary.csv' #전체 파일에서 특정 컬럼만 추출
+query = '스마트 기술 산업'
 
 
 
@@ -71,6 +72,6 @@ for start in start_values:
     time.sleep(1)
     news_dataframe_summary = pd.DataFrame([[row[7]] for row in news_list], columns=["뉴스_요약"])
 
-news_dataframe.to_csv(news_filename, index=False, encoding="utf-8-sig")
-news_dataframe_summary.to_csv(news_filtered_columns, index=False, encoding="utf-8-sig")
+news_dataframe.to_csv(file_dic_path+news_filename, index=False, encoding="utf-8-sig")
+news_dataframe_summary.to_csv(file_dic_path+news_filtered_columns, index=False, encoding="utf-8-sig")
 print(news_dataframe['뉴스_요약'])
