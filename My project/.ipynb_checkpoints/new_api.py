@@ -7,9 +7,9 @@ import pandas as pd
 
 
 file_dic_path = './../csv_file_gather/'
-news_filename = 'Smart_Tech_news_data.csv' #api요청으로 받아온 파일 전체
-news_filtered_columns = 'Smart_Tech_industry_news_summary.csv' #전체 파일에서 특정 컬럼만 추출
-query = '스마트 기술 산업'
+news_filename = 'trend_news_data.csv' #api요청으로 받아온 파일 전체
+news_filtered_columns = 'trend_news_summary.csv' #전체 파일에서 특정 컬럼만 추출
+query = '트렌드'
 
 
 
